@@ -1,0 +1,19 @@
+[project]
+name = "compote"
+version = "0.0.1"
+description = "A configuration utility for Python progams"
+readme = "README.md"
+authors = [
+    { name = "Peter Doherty", email = "pdoherty@protonmail.com" }
+]
+requires-python = ">=3.13"
+dependencies = ["loguru"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.0.2",
+]
