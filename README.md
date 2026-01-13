@@ -3,9 +3,9 @@
 ## Rationale
 Compote is a library which provides structure and utility for use when bootstrapping an application's common configuration class.
 
-This is a common pattern which consolidates application configuration in a single source of truth and prevents application components from having to reach out into the environment to read values at runtime, handle missing values, handle type casting of read values, etc. There are two core functions which read values from the environment: `fetch_from_env_or_default` and `fetch_from_env_or_fail`. These functions will be documented below but hopefully their names reveal their intentions.
+This is a pattern which consolidates application configuration in a single source of truth and prevents application components from having to reach out into the environment to read values at runtime, handle missing values, handle type casting of read values, etc. There are two core functions which read values from the environment: `fetch_from_env_or_default` and `fetch_from_env_or_fail`. These functions will be documented below but hopefully their names reveal their intentions.
 
-This library also provides hooks for transformation functions (`transform_env`, `transform_default` and `transform_value`) to apply after reading values from the environment or setting defaults. These are useful for operations like casting values and doing data validation.
+This library also provides hooks for transformation functions (`transform_env`, `transform_default` and `transform_value`) to apply after reading value from the environment or setting defaults. These are useful for operations like casting value types and doing data validation.
 
 A nice side effect of this consolidation is that it makes stubbing values into test environments simple. Instead of having to monkeypatch the environment, you can just provide a different `Compote` instance in your test setup.
 

@@ -7,7 +7,7 @@ authors = [
     { name = "Peter Doherty", email = "pdoherty@protonmail.com" }
 ]
 requires-python = ">=3.13"
-dependencies = ["loguru"]
+dependencies = []
 
 [build-system]
 requires = ["hatchling"]

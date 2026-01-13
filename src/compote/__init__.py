@@ -1,14 +1,12 @@
 import os
 
-from loguru import logger
-
 
 class Compote:
     """
-    - uniform access for env vars
+    - uniform access for environment variables
     - supply defaults where applicable
     - raise exception if required values are missing
-    - optionally transform env value, default value or both
+    - optionally transform environment values, default values or result value
     """
 
     @staticmethod
@@ -32,7 +30,6 @@ class Compote:
         if value := os.environ.get(key):
             value = transform_env(value)
         else:
-            logger.warning(f"Using default value for {key}:{default}.")
             value = transform_default(default)
 
         return transform_value(value)
