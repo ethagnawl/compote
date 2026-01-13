@@ -77,9 +77,14 @@ GREETING=hola uv run --with-editable . examples/flask_app.py
 ```
 
 ## Future Work
+### Loosen Python version requirements
+This library should work with pretty much any version of Python but I will need to add a test matrix and verify that.
+
 ### Pluggable "fail" exceptions
 It'd be a nice touch if users could provide their own exception class to use if a required environment variable is not found.
+
 ### Logging
 I find it helpful to know when default values are used and have historically used loguru to log a warning message when this happens. I don't want to add a dependency for anyone wishing to use this library, though, so I plan to add pluggable logging in a future release.
+
 ### Types
 I personally don't care for Python type hints (because they lie!) but I'll be a good steward and add them at some point.
