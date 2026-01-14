@@ -11,6 +11,9 @@ A nice side effect of this consolidation is that it makes stubbing values into t
 
 Compote is a piece of code I've been carrying around and iterating on since around 2018. It was originally inspired by the `Config` class in Miguel Grinberg's infamous Flask tutorial.
 
+## Installation
+`pip install compote`
+
 ## Features
 ### Reading from environment
 #### Pull from env and fall back to default
