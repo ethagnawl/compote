@@ -49,6 +49,7 @@ def some_value_transformer(value):
     value_ = int(value)
     if value_ < 100:
         raise Exception(f"{value_} must be greater than 100!")
+    return value_
 
 class Config(Compote):
     SOME_VALUE = Compote.fetch_from_env_or_default(
